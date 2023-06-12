@@ -1,0 +1,17 @@
+{% extends 'buyer_template.html' %}
+{% load static %}
+{% block content %}
+    <label>Add a new Piece</label>
+    <button id="upload_button"><a href="{% url 'artist' %}">Upload</a></button>
+    <table>
+        {% for arts in art %}
+            <tr class="art_box">
+                <td class="art_image"><img src="/{{arts.piece}}" style="width:100%"></td>
+                <td class="art_title">{{arts.name}}</td>
+                <td class="art_price">{{arts.price}}</td>
+                <td class="art_updelbtn"><button class=updel_btn><a href="{% url 'update_art' arts.id %}">Update</a></button></td>
+                <td class="art_updelbtn"><button class="updel_btn art_deletebtn"><a href="{% url 'delete_art' arts.id %}">Delete</a></button></td> 
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

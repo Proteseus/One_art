@@ -1,0 +1,35 @@
+{% extends 'artist_template.html' %}
+{% load static %}
+{% block content %}
+  <div class = "container">
+    <form id="form" method="POST" enctype='multipart/form-data' action="">
+      {% csrf_token %}
+        <h1>Create Listing</h1>
+        <div class="input-control">
+          <label for = "name">Name</label>
+          {{form.name}}
+        </div>
+
+        <div class="input-control">
+          <label for="piece">Piece</label>
+          {{form.piece}}
+        </div>
+
+        <div class="input-control">
+          <label for="artist">Artist</label>
+          {{form.artist}}
+        </div>
+
+        <div class="input-control">
+          <label for="owner">Owner</label>
+          {{form.owner}}
+        </div>
+
+        <div class="input-control">
+          <label for="price">Price</label>
+          {{form.price}}
+        </div>
+      <input id="submit_button" type="submit" name="Submit" value="Upload">
+    </form>
+  </div>
+{% endblock %}

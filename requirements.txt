@@ -1,0 +1,26 @@
+PROJECT Requirements >> pip install django
+                     >> pip install mysql-connector-python
+                     >> pip install mysqlclient
+                     >> pip install pillow
+                     >> MySQL
+
+MySQL queries for project 
+
+    create schema one_art;
+    create user one_art_admin identified by 'Horriblebob11';
+    grant all on one_art.* to one_art_admin;
+    flush privileges;
+
+DELETE>> from attr import field << from froms.py
+RUN>> py manage.py makemigrations << initialize models to be migrated to database
+   >> py manage.py migrate << migrate to database
+   >> py manage.py runserver << to start localhost server
+SERVER>> localhost:8000
+URLS>> localhost:8000/admin << ADMIN
+    >> localhost:8000/      << HOME
+    >> localhost:8000/signup << SIGNUP
+    >> localhost:8000/signin << SIGNIN
+
+Also run>> py manage.py createsuperuser << to create an admin
+P.S. DON'T LOGIN WITH ADMIN UNLESS U HAVE LOGGED OUT OF ANY OTHER USER
+

@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+          <div class = "container signup-cont">
+            <form id="form" method=POST>
+                {% csrf_token %}
+                <h1>Sign Up</h1>
+                <div class="input-control">
+                    <label for = "username">Username</label>
+                    {{form.username}}
+                </div>
+
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    {{form.email}}
+                </div>
+
+                <div class="input-control">
+                    <label for="phone">Phone</label>
+                    {{form.phone}}
+                </div>
+
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    {{form.password1}}
+                </div>
+
+                <div class="input-control">
+                    <label for="password2">Confirm Password</label>
+                    {{form.password2}}
+                </div>
+
+                {% for rad in radio %}
+                    <div class="input-chekbox-control">
+                        {{rad}}
+                        {{rad.label}}
+                    </div>
+                {% endfor %}
+                
+                <hr>
+
+                <div id="error"></div>
+
+                <button id="signup_button" type="submit">Sign Up</button>
+            </form>
+
+
+            <div class="container-text">
+                <span>
+                    <p class="large-text_signup">Sign up it's <span style="color:green;">Free!</span></p>
+                </span>
+            </div>
+{% endblock %}

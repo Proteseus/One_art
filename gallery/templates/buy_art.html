@@ -1,0 +1,30 @@
+{% extends 'buyer_template.html' %}
+{% load static %}
+{% block content %}
+  <div class = "container">
+    <form id="form" method="POST">
+      {% csrf_token %}
+        <h1>BUY ART</h1>
+        <div class="input-control">
+            <label for = "username">Name</label>
+            {{form.name}}
+        </div>
+
+        <div class="input-control">
+            <label for="email">Owner</label>
+            {{form.owner}}
+        </div>
+
+        <div class="input-control">
+            <label for="phone">Price</label>
+            {{form.price}}
+        </div>
+
+        <div class="input-control">
+            <label for="password">Status</label>
+            {{form.status}}
+        </div>
+      <input id="submit_button" type="submit" name="Submit" value="Buy">
+    </form>
+  </div>
+{% endblock %}

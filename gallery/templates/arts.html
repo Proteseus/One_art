@@ -1,0 +1,20 @@
+{% extends 'artist_template.html' %}
+{% load static %}
+{% block content %}
+    <table>
+        {% for arts in art %}
+            <tr>
+                <td>
+                    <div class="item-card">
+                        <img src="/{{arts.piece}}" alt="Avatar" style="width:100%">
+                    </div>
+                
+                    <div class="item-container">
+                        <p class="description"><b>Title: {{ arts.name }}</b></p> 
+                        <p class="price">Artist: {{ arts.artist }}</p>
+                    </div>
+                </td>  
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,53 @@
+body {
+    background-image: url('../img/darkforest.jpg');
+}
+
+/*Image and text containers for front page*/
+
+/* Sections for Home Page */
+
+.containerFlex {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+  }
+
+/*------------------------------------*/
+
+.containerFP_img {
+    background-color: transparent;
+    padding: 10px;
+    flex: 50%;
+}
+
+.containerFP_text {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+}
+
+.btnFP {
+    border-radius: 12px;
+    border: 2px solid #0082e6;  
+    color: #0082e6;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    margin: auto;
+}
+
+.btnFP:hover {
+    border-radius: 12px;
+    background-color: #0082e6;
+    cursor: pointer;
+}
+
+.btnFP a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.btnFP:hover a {
+    color: white;
+}

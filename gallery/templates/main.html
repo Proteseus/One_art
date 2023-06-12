@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/stylers.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/home_styler.css' %}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="{% static '/js/script.js' %}"></script>
+        <title>One Art</title>
+    </head>
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <span class="logo">ONE ART</span> 
+            <a href="about.html">About</a>
+            <a href="{% url 'signin' %}">Sign in</a>
+            <a href="{% url 'register' %}">Sign up</a>
+            <a href="{% url 'browse' %}">Browse</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="#" class="icon" onclick="Toggle_hamburger_menu()">
+                <i style='font-size:17px;'>&#xf039;</i>
+            </a>
+
+            
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+
+    </body>
+</html>

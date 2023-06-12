@@ -1,0 +1,21 @@
+{% extends 'buyer_template.html' %}
+{% load static %}
+{% block content %}
+    <table>
+        {% for arts in art %}
+            <tr>
+                <td>
+                <div class="item-card">
+                    <img src="/{{arts.piece}}" alt="Avatar" style="width:100%">
+                </div>
+            
+                <div class="item-container">
+                    <p class="description"><b>{{ arts.name }}</b></p> 
+                    <p class="price">${{ arts.price }}</p>
+                    <button type="button"><a href="{% url 'update_art' arts.id %}">Buy</a></button> 
+                </div>
+                </td>  
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="containerFlex">
+            <div class="containerFP_img">
+                <img src = "{% static '/img/Easel.webp' %}">
+                <div class="containerFP_text">
+                    <p>Monetize, your art and profit from your creativity!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="containerFlex">
+            <div class="containerFP_img">
+
+
+                <img src = "{% static '/img/money-dollar-circle-512.webp' %}">
+                <div class="containerFP_text">
+                    <p>Collect art pieces, meet artists</p>
+                </div>
+            
+                
+            </div>
+        </div>
+        
+        <div class="containerFlex">
+
+            <div class="containerFP_img">
+                <img src = "{% static '/img/paint-brush-icon.png' %}">
+            
+            </div> 
+
+            <div class="containerFP_text">
+                <p>Sign UP NOW!</p> <br>
+                <button class="btnFP"><a href="{% url 'register' %}">Sign up</a></button>
+            </div>
+
+        
+        </div>
+        
+    </section>
+{% endblock %}

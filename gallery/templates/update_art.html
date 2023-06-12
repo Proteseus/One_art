@@ -1,0 +1,19 @@
+{% extends 'artist_template.html' %}
+{% load static %}
+{% block content %}
+  <div class = "container">
+    <form id="form" method="POST">
+      {% csrf_token %}
+        <h1>Update Listing</h1>
+        <div class="input-control">
+            <h1><b>{{art_name}}</b></h1>
+        </div>
+
+        <div class="input-control">
+            <label for="phone">Price</label>
+            {{form.price}}
+        </div>
+      <input id="submit_button" type="submit" name="Submit" value="Update">
+    </form>
+  </div>
+{% endblock %}

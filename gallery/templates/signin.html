@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+          <div class = "container">
+            <form id="form" method=POST>
+                {% csrf_token %}
+                <h1>Sign in</h1>
+                <div class="input-control">
+                    <label for = "username">Username</label>
+                    <input id="username" name="username" type="text">
+                </div>
+
+
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password">
+                   
+                </div>
+
+                {% for rad in form %}
+                    <div class="input-chekbox-control">
+                        {{rad}}
+                    </div>
+                {% endfor %}
+                <hr>
+
+                {% for message in messages %}
+                    <p id="messages">{{message}}</p>
+                {% endfor %}
+                <div id="error"></div>
+
+                <input id="submit_button" type="submit" name="submit" value="Sign In">
+                
+            </form>
+
+            <div class="container-text">
+                <span>
+                    <p class="large-text_signup">Don't have an account yet?</p> <br>
+                    <p class="large-text_signup" style="color:green;">Sign up</p>
+                    <button class="btn">
+                        <a href="{% url 'register' %}">Sign up</a>
+                    </button>
+                </span>
+            </div>
+            
+{% endblock %}
